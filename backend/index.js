@@ -1,16 +1,15 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
-//import uploadRoutes from './routes/upload.js';
+import multer from 'multer';
+import dotenv from 'dotenv';
+import streamTranslate from './routes/streamTranslateTesseract.js';
 
 dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-//app.use('/api/upload', uploadRoutes);
+app.use('/api', streamTranslate); 
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => {
-  console.log(`Express server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

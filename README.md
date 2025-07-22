@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+This project is a full-stack solution to ingest, translate, and extract structured data from Tamil-language real estate PDFs. It uses OCR + translation to stream English results **page by page**, and lists transactions in a searchable table.
+
+---
+
+##  Features
+
+- Upload Tamil-language real estate PDFs
+-  Extracts one page at a time using in-memory OCR
+- Translates Tamil → English using Google Translate API
+-  Displays translations per-page as they stream in
+-  Extracts and lists structured transaction fields:
+  - Document Number
+  - Buyer/Seller Names
+  - Survey Number
+  - Dates & Values
+- ⚡ Fast: Streams results instead of waiting for full file
+
+---
+
+---
+
+## 🧑 How to Run Locally
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/Punithshetty321/translatepdf
+# start backend 
+- cd backend
+- npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# now in new terminal open the folder 
+- npm run dev 
+to start the frontend
